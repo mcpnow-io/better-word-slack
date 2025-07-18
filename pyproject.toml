@@ -3,7 +3,7 @@ requires = ["setuptools>=66", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "better_word_slack"
+name = "better-word-slack"
 version = "0.1"
 description = "Improve your Slack experience, every little bit helps"
 readme = "README.md"
@@ -28,13 +28,18 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
     "Topic :: Software Development :: Bug Tracking"
 ]
-dependencies = []
+dependencies = [
+    "slack_sdk",
+    "flask",
+    "requests",
+    "googletrans==4.0.0rc1",
+]
 
 [project.urls]
-Homepage = "https://github.com/mcpnow-io/better_word_slack"
-"Bug Reports" = "https://github.com/mcpnow-io/better_word_slack/issues"
-Source = "https://github.com/mcpnow-io/better_word_slack"
-Wiki = "https://github.com/mcpnow-io/better_word_slack/wiki"
+Homepage = "https://github.com/mcpnow-io/better-word-slack"
+"Bug Reports" = "https://github.com/mcpnow-io/better-word-slack/issues"
+Source = "https://github.com/mcpnow-io/better-word-slack"
+Wiki = "https://github.com/mcpnow-io/better-word-slack/wiki"
 
 [project.optional-dependencies]
 dev = [
@@ -45,7 +50,7 @@ dev = [
 ]
 
 [project.scripts]
-conduit-mcp = "src.conduit:main"
+better-word = "src.better_word:main"
 
 [tool.setuptools]
 packages = ["src"]
