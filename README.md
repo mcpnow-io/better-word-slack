@@ -108,37 +108,6 @@ ngrok http 3000
 # Use the HTTPS URL (e.g., https://abc123.ngrok.io) as your Request URL in Slack
 ```
 
-### Running in Production
-
-Deploy to any platform that supports Python web applications:
-
-#### Heroku
-```bash
-# Create Procfile
-echo "web: python run.py" > Procfile
-
-# Deploy
-git add .
-git commit -m "Add Slack bot"
-git push heroku main
-
-# Set environment variables
-heroku config:set SLACK_BOT_TOKEN=xoxb-your-token
-heroku config:set SLACK_SIGNING_SECRET=your-secret
-```
-
-#### Docker
-```bash
-# Build image
-docker build -t better-word-slack .
-
-# Run container
-docker run -p 3000:3000 \
-  -e SLACK_BOT_TOKEN=xoxb-your-token \
-  -e SLACK_SIGNING_SECRET=your-secret \
-  better-word-slack
-```
-
 ## API Endpoints
 
 - `POST /slack/commands/better` - Handles the `/better` slash command

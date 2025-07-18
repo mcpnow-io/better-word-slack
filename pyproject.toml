@@ -30,9 +30,8 @@ classifiers = [
 ]
 dependencies = [
     "slack_sdk",
-    "flask",
-    "requests",
-    "googletrans==4.0.0rc1",
+    "python-dotenv",
+    "litellm",
 ]
 
 [project.urls]
@@ -47,6 +46,9 @@ dev = [
     "pre-commit",
     "pytest",
     "pytest-cov",
+]
+gemini = [
+    "google-genai",
 ]
 
 [project.scripts]
