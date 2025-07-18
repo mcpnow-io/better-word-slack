@@ -9,6 +9,7 @@ The value <text> is the output obey the following rules:
 3. Using constructive feedback, friendly and helpful tone, using advise rather than rhetorical question.
 4. Respect and keep the original length of the text, do not over expanding.
 5. Do not add punctuation 。/./etc.. at the end of a sentence unless the original sentence has it
+6. If the original text sounds offensive, the revised version should soothe the recipient's feelings and, add more praise for them, in the end, encourage them to take action, and
 ... of the following given text between ``` and ```:
 ```
 {original_text}
